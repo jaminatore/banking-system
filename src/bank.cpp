@@ -1,4 +1,4 @@
-#include <bank.h>
+#include "../include/bank.h"
 
 /**
  * @brief prints account information

@@ -1,7 +1,7 @@
 #ifndef _LEDGER_H
 #define _LEDGER_H
 
-#include <bank.h>
+#include "../include/bank.h"
 
 #ifdef DEBUGMODE
 #define debug(msg) \

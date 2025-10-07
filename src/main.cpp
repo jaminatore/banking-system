@@ -1,4 +1,4 @@
-#include <ledger.h>
+#include "../include/ledger.h"
 
 int main(int argc, char* argv[]) {
   if (argc != 3) {

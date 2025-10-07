@@ -1,4 +1,5 @@
-#include <ledger.h>
+#include "../include/ledger.h"
+#include "../include/bank.h"
 #include <sstream>
 
 using namespace std;
@@ -55,7 +56,7 @@ void InitBank(int num_workers, char *filename) {
   bank->print_account(); 
   // free memory
   delete bank; 
-  delete workers;
+  delete[] workers;
 }
 
 /**
