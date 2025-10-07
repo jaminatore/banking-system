@@ -50,11 +50,11 @@ Default ledger location is inputs/ledger.txt (the Makefile will use it automatic
 
 Examples:
 
-# Build then run using the makefile defaults
+### Build then run using the makefile defaults
 ```make run```
 
 
-# Override THREADS and LEDGER explicitly (case-sensitive variable name)
+### Override THREADS and LEDGER explicitly (case-sensitive variable name)
 ```make run THREADS=1 LEDGER=inputs/ledger.txt```
 
 
