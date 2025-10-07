@@ -1,4 +1,4 @@
-# Concurrent Banking System – Multithreaded Ledger Simulation
+# Banking System – Multithreaded Ledger Simulation
 
 This project implements a **multithreaded banking system** that processes a ledger of transactions (deposits, withdrawals, and transfers) using multiple worker threads.  
 It demonstrates thread synchronization with mutexes, proper deadlock prevention, and concurrent data access control in C++.
