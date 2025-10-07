@@ -25,7 +25,7 @@ The system simulates a bank that:
 ---
 
 ## File Structure
-
+```
 banking-system/
 ├── include/
 | ├── bank.h
@@ -36,7 +36,7 @@ banking-system/
 │ └── main.cpp
 ├── README.md
 └── .gitignore
-
+```
 ---
 
 ## How It Works
