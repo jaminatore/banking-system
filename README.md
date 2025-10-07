@@ -30,11 +30,12 @@ banking-system/
 ├── include/
 | ├── bank.h
 │ └── ledger.h
+├── inputs/
+| └── ledger.txt
 ├── src/
 │ ├── bank.cpp
 | ├── ledger.cpp
 │ └── main.cpp
-├── ledger.txt
 ├── README.md
 └── .gitignore
 ```
