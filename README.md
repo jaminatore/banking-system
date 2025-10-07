@@ -34,6 +34,7 @@ banking-system/
 │ ├── bank.cpp
 | ├── ledger.cpp
 │ └── main.cpp
+├── ledger.txt
 ├── README.md
 └── .gitignore
 ```
