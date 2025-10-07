@@ -26,7 +26,7 @@ The system simulates a bank that:
 ---
 
 ## File Structure
-
+```
 banking-system/
 ├── include/
 | ├── bank.h
@@ -35,10 +35,29 @@ banking-system/
 │ ├── bank.cpp
 | ├── ledger.cpp
 │ └── main.cpp
+├── ledger.txt
 ├── README.md
 └── .gitignore
-
+```
 ---
+
+## Running the Program
+
+The binary is placed at bin/bank_sim after a successful build.
+
+Default ledger location is inputs/ledger.txt (the Makefile will use it automatically if present). You can override the number of worker threads and ledger path using variables on the make run command line.
+
+Examples:
+
+# Build then run using the makefile defaults
+```make run```
+
+
+# Override THREADS and LEDGER explicitly (case-sensitive variable name)
+```make run THREADS=1 LEDGER=inputs/ledger.txt```
+
+
+Important: make run threads=1 (lowercase threads) will not override the Makefile THREADS variable — use THREADS=1 or run the binary directly.
 
 ## How It Works
 

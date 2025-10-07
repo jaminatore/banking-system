@@ -129,13 +129,16 @@ void *worker(void *workerID) {
   // type casting
   int id = (int) (intptr_t) workerID; 
   // grab entries from ledger
-  while (1) {
+  while (true) {
     // entry object
     Ledger current_entry; 
     // check if empty
-    if (ledger.empty()) { return NULL; }
-    // crit section + entry object + update ledger
     pthread_mutex_lock(&ledger_lock);
+    if (ledger.empty()) { 
+      pthread_mutex_unlock(&ledger_lock);
+      return NULL; 
+    }
+    // crit section + entry object + update ledger
     current_entry = ledger.front(); 
     ledger.pop_front(); 
     // unlock
