@@ -103,7 +103,7 @@ Bank::~Bank() {
     pthread_mutex_destroy(&accounts[i].lock); 
   }
   // destroy accounts
-  delete accounts;
+  delete[] accounts;
 }
 
 /**
@@ -211,9 +211,7 @@ int Bank::transfer(int workerID, int ledgerID, int srcID, int destID, unsigned i
   Account& destination = accounts[destID]; 
   int successful = 0; 
   // error case
-  pthread_mutex_lock(&source.lock);
   if (srcID == destID) { return -1; }
-  pthread_mutex_unlock(&source.lock);
   // lock based on src and destID
   if (srcID < destID) {
     pthread_mutex_lock(&source.lock); // 213 locked --> context switch
