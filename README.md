@@ -102,7 +102,7 @@ Bank::deposit(int workerID, int ledgerID, int accountID, int amount)
 ```
 - Locks the target account to ensure exclusive access.
 - Increases the balance by the specified amount.
-- Logs the result using the macro `DEPOSITE_MSG()`:
+- Logs the result using the macro `DEPOSIT_MSG()`:
   ```
   [ SUCCESS ] TID: 0, LID: 1, Acc: 2 DEPOSIT $100
   ```
@@ -155,7 +155,7 @@ Example:
 ## Logging Format
 
 All messages are printed through macros in `bank.h` for consistent formatting:
-- `DEPOSITE_MSG()`  
+- `DEPOSIT_MSG()`  
 - `WITHDRAW_MSG()`  
 - `TRANSFER_MSG()`
 
